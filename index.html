@@ -232,22 +232,33 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                    <img src="assets/GurpreetSingh_Profile.jpeg" class="card-img-top" alt="GurpreetSingh" style="height: 220px; object-fit: cover;">
+                    <img src="assets/SandeepMahajan_Profile.jpeg" class="card-img-top" alt="SandeepMahajan" style="height: 220px; object-fit: cover;">
                     <div class="card-body d-flex flex-column">
-                        <h4 class="card-title">Gurpreet Singh</h4>
+                        <h4 class="card-title">Dr. Sandeep Mahajan</h4>
                         <h5>Board Panel Director</h5>
                         <p class="card-text">
-                            Gurpreet Singh looks forward to helping the community with his knowledge and experience.
-                            As an experienced regulated Canadian Immigration Consultant (RCIC-IRB)
-                            with a demonstrated history of helping individuals and families achieve their immigration
-                            goals, Gurpreet is available to now help the community.
+                            Dr. Sandeep Mahajan is an Immigration Consultant and also the founder of Beyond Immigration Services.
+                            His over a decade of focused experience is enriched due to the field of Sciences and Education from India, along with astute immigration expertise.
                         </p>
-                        <div class="collapse" id="more-gurpreet">
+                        <div class="collapse" id="more-sandeep">
                             <p>
-                                He has helped many immigrants, newcomers and Refugees find their settlement goals in Canada. He is fluent in English, Hindi and Punjabi.
+                                He has been associated with the field of academics in various capacities and is not only a decorated research scholar with many awards and accolades to his credit, such as; Post-Doc Fellowship at UNESCO New Delhi Office, India, but is also a published academician.
+                                He has augmented himself with national and international professional training, conferences, and project works which have made him a vastly qualified person with excellent interpersonal and professional relationships.
+                            </p>
+                            <p>
+                                He has joined our board as a volunteer member to help the community and residents with mentorship and guidance.
+                                Dr. Mahajan is passionate about prioritizing his clients’ needs and vigorously works towards realizing their immigration dreams.
+                            </p>
+                            <p>
+                                His mantra is to help people with his skills and experience and go a step BEYOND to MAKE IT HAPPEN.
+                                Mr. Sandeep is a  registered and licensed member of the College of Immigration and Citizenship Consultants.
+                                You can also reach him for specific immigration needs via his website.
+                            </p>
+                            <p>
+                                <a href="https://beyondimm.com/about-us/">Beyond Immigration Services</a>
                             </p>
                         </div>
-                        <button class="btn btn-link p-0 mt-auto" type="button" data-bs-toggle="collapse" data-bs-target="#more-gurpreet" aria-expanded="false" aria-controls="more-gurpreet">
+                        <button class="btn btn-link p-0 mt-auto" type="button" data-bs-toggle="collapse" data-bs-target="#more-sandeep" aria-expanded="false" aria-controls="more-sandeep">
                             Read More
                         </button>
                     </div>
@@ -366,6 +377,21 @@
         <p>Location (with appointments only): Office 2D06, 2nd floor, 7215 Goreway Drive, Mississauga, L4T 0B4</p>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(function (btn) {
+            var target = document.querySelector(btn.getAttribute('data-bs-target'));
+            btn.textContent = target.classList.contains('show') ? 'Read Less' : 'Read More';
+            target.addEventListener('show.bs.collapse', function () {
+                btn.textContent = 'Read Less';
+            });
+            target.addEventListener('hide.bs.collapse', function () {
+                btn.textContent = 'Read More';
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
