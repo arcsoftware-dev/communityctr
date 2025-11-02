@@ -20,7 +20,7 @@
         <span class="ms-3" style="font-family: 'Brush Script MT', cursive; font-size:2rem; color:#0d6efd; font-weight:bold; letter-spacing:2px;">
             Community CTR
         </span>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" id="navbarCollapseButton">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -381,6 +381,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(function (btn) {
+            if(btn.getAttribute('id') === 'navbarCollapseButton') return; // Skip navbar toggle button
             var target = document.querySelector(btn.getAttribute('data-bs-target'));
             btn.textContent = target.classList.contains('show') ? 'Read Less' : 'Read More';
             target.addEventListener('show.bs.collapse', function () {
